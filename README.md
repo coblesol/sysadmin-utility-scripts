@@ -1,7 +1,20 @@
 # sysadmin-utility-scripts
-A collection of PowerShell and Bash scripts designed to automate common system administrator tasks across Windows and Linux environments.
 
-## PowerShell Scripts
+This repository contains PowerShell and Bash scripts for automating routine system administration tasks on Windows and Linux.
 
-### check-service.ps1
-Checks whether specified Windows services are running. The script accepts a list of service names and logs each status to `service-status-log.txt` in the same directory. Existing logs are prepended with a header when the file is created.
+---
+
+## 🔧 PowerShell Scripts
+
+### `check-service.ps1`
+Checks the status of one or more Windows services and logs the results to a local log file.
+
+**Features:**
+- Accepts a list of service names
+- Displays status in the terminal
+- Logs results with timestamps to `service-status-log.txt`
+- Adds a header to the log when the file is first created
+
+**Usage:**
+```powershell
+.\check-service.ps1 -ServiceNames "Spooler","wuauserv"
